@@ -7,8 +7,8 @@ class Triangle
     @c = c 
   end
   
-   def kind
-    validate_triangle
+  def kind
+    check_triangle
     if a == b && b == c
       :equilateral
     elsif a == b || b == c || a == c
@@ -18,7 +18,7 @@ class Triangle
     end
   end
   
-  def validate_triangle
+  def check_triangle
     real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
     [a, b, c].each do |side|
       real_triangle << false if side <= 0
@@ -26,6 +26,7 @@ class Triangle
     end
   end
 
-  class TriangleError < StandardError
-  end
+    class TriangleError < StandardError
+    end
+    
 end
