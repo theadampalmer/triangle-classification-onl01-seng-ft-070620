@@ -1,4 +1,8 @@
 class Triangle
   
-  def initialize 
+  def initialize(|a|, |b|, |c|)
+    
+  end
+  
+  def kind()
 end
